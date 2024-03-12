@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://0n0k54qs4fbh"]
 
-[ext_resource type="Script" path="res://popup/popupWindow.gd" id="1_45mpp"]
-[ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_e0u44"]
+[ext_resource type="Script" path="res://scripts/popupWindow.gd" id="1_w0eca"]
+[ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_v826i"]
 
 [node name="Area2D" type="Area2D"]
-script = ExtResource("1_45mpp")
+script = ExtResource("1_w0eca")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_e0u44")
+texture = ExtResource("2_v826i")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 28.0
@@ -19,6 +19,6 @@ metadata/_edit_use_anchors_ = true
 [node name="X" type="Sprite2D" parent="Button"]
 position = Vector2(18, 17)
 scale = Vector2(0.261719, 0.242187)
-texture = ExtResource("2_e0u44")
+texture = ExtResource("2_v826i")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -2,7 +2,12 @@ extends Marker2D
 
 var popup = preload("res://scenes/popup.tscn")
 @onready var timer = get_node("Timer")
-@export var handicap = 4
+
+@export var handicap = 3
+@export var storage = 0
+
+var differenceInSpawn = 4
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,7 +15,7 @@ func _ready():
 	resetSpawn()
 
 func resetSpawn():
-	var spawnDif = randi() % 5
+	var spawnDif = randi() % differenceInSpawn
 	timer.set_wait_time(handicap + spawnDif)
 	
 	
@@ -19,7 +24,15 @@ func resetSpawn():
 	
 func _on_timer_timeout():
 	var popupSpawned = popup.instantiate()
+	# get_parent
+	var xDif = randi() % 550
+	var yDif = randi() % 250
+	popupSpawned.position = Vector2(xDif,yDif)
 	add_child(popupSpawned)
 	resetSpawn()
+	
+func incrementStorage():
+	storage += 1
+	print("storage:", storage)
 	
 	

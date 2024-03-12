@@ -6,7 +6,7 @@ var Spawner = preload("res://scenes/spawner.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var spawner = Spawner.instantiate()
-	add_child(spawner)
+	$CanvasLayer/Center.add_child(spawner)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

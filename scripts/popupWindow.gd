@@ -18,7 +18,6 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	print("clicked") # Replace with function body.
 	queue_free()
 
 
@@ -30,5 +29,6 @@ func _on_timer_timeout():
 		warning = true
 	else:
 		# ADD TO TOTAL
+		get_parent().incrementStorage()
 		queue_free()
 

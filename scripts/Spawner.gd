@@ -25,6 +25,7 @@ func resetSpawn():
 func _on_timer_timeout():
 	var popupSpawned = popup.instantiate()
 	# get_parent
+	#var e = get_parent().texture.get_size()
 	var xDif = randi() % 550
 	var yDif = randi() % 250
 	popupSpawned.position = Vector2(xDif,yDif)

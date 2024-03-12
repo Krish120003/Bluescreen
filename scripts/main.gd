@@ -1,12 +1,18 @@
 extends Node2D
 
 var CustomPopup = preload("res://scenes/popup.tscn")
+var Spawner = preload("res://scenes/spawner.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var spawner = Spawner.instantiate()
+	add_child(spawner)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(delta)
+	pass
+
+		
+
+	

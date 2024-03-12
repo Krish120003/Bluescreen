@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs78dmmvvyo7"]
+
+[ext_resource type="Theme" uid="uid://dhildev208m5x" path="res://themes/healthbar.tres" id="1_w7jyn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_right = 582.0
+offset_bottom = 32.0
+theme = ExtResource("1_w7jyn")
+value = 100.0

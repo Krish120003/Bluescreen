@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dhildev208m5x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_veprd"]
+bg_color = Color(0.843137, 0.843137, 0.843137, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8njm"]
+bg_color = Color(0.662745, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 0)
+
+[resource]
+ProgressBar/colors/font_color = Color(1, 1, 1, 1)
+ProgressBar/colors/font_outline_color = Color(1, 1, 1, 1)
+ProgressBar/styles/background = SubResource("StyleBoxFlat_veprd")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_g8njm")

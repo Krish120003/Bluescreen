@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cirw4p6lf414i"]
+[gd_scene load_steps=3 format=3 uid="uid://cirw4p6lf414i"]
 
 [ext_resource type="PackedScene" uid="uid://bxl6qcoqdudqu" path="res://popup.tscn" id="1_n2uok"]
 
+[sub_resource type="GDScript" id="GDScript_4fhdi"]
+
 [node name="main" type="Node2D"]
+script = SubResource("GDScript_4fhdi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

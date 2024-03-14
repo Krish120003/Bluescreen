@@ -2,9 +2,10 @@ extends Area2D
 
 @onready var timer = get_node("Timer")
 @onready var background: Sprite2D = get_node("BGSprite")
+@onready var enter: Sprite2D = get_node("Button/Enter")
 var warning = false # if window has started flashing
 var originalSpawnTime = 3
-var warningSpawnTime = 2
+var warningSpawnTime = 1
 var captcha = "ra1"
 
 var captchas = [] #manually make and assign captchas
@@ -31,6 +32,12 @@ func _on_button_pressed():
 	if text == captcha:
 		print("The captcha ", text, " was entered.")
 		queue_free()
+	else:
+		# show to user that its wrong?
+		# sound effect? 
+		enter.self_modulate = Color("Red", 0.5)
+		pass
+		
 	
 
 func _on_timer_timeout():

@@ -16,7 +16,7 @@ offset_right = 64.0
 offset_bottom = 55.0
 size_flags_horizontal = 8
 
-[node name="X" type="Sprite2D" parent="Button"]
+[node name="Enter" type="Sprite2D" parent="Button"]
 position = Vector2(18, 17)
 scale = Vector2(0.261719, 0.242187)
 texture = ExtResource("2_atgl1")

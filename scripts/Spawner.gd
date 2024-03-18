@@ -18,7 +18,7 @@ func _ready():
 	resetSpawn()
 
 func resetSpawn():
-	var spawnDif = randi() % differenceInSpawn + 0.5
+	var spawnDif = randi() % differenceInSpawn + 0.1
 	timer.set_wait_time(handicap + spawnDif)
 	
 	

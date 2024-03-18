@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dulojiscntjlq"]
+[gd_scene load_steps=7 format=3 uid="uid://dulojiscntjlq"]
 
 [ext_resource type="Script" path="res://scripts/popupCaptcha.gd" id="1_0u5el"]
+[ext_resource type="Texture2D" uid="uid://4mpsxmpqf12h" path="res://themes/window_popup.svg" id="2_70vd1"]
 [ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_atgl1"]
 [ext_resource type="FontFile" uid="uid://dd0rk6arlj6e" path="res://fonts/font1.ttf" id="3_vo1yg"]
 [ext_resource type="Texture2D" uid="uid://1gfk5v8v6xn1" path="res://themes/sketchedLines.png" id="4_d1s0l"]
@@ -12,7 +13,9 @@ script = ExtResource("1_0u5el")
 
 [node name="BGSprite" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_2qcij")
-texture = ExtResource("2_atgl1")
+position = Vector2(-1.00001, -4.5)
+scale = Vector2(0.147852, 0.140859)
+texture = ExtResource("2_70vd1")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 7
@@ -20,12 +23,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -50.0
-offset_top = -44.0
-offset_right = 50.0
-offset_bottom = -10.0
+offset_left = -53.0
+offset_top = -47.0
+offset_right = 47.0
+offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0.0705882, 0.184314, 1)
 theme_override_fonts/font = ExtResource("3_vo1yg")
 theme_override_font_sizes/font_size = 60
 text = "aBC"

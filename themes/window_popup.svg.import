@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eqmomt6x5m6c"
-path="res://.godot/imported/windows_xp_bg.png-d897b119f109faa89f4d61a16df12094.ctex"
+uid="uid://4mpsxmpqf12h"
+path="res://.godot/imported/window_popup.svg-1ba77988d7ed4082585691ac89a22b53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://themes/windows_xp_bg.png"
-dest_files=["res://.godot/imported/windows_xp_bg.png-d897b119f109faa89f4d61a16df12094.ctex"]
+source_file="res://themes/window_popup.svg"
+dest_files=["res://.godot/imported/window_popup.svg-1ba77988d7ed4082585691ac89a22b53.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

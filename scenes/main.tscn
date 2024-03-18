@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cirw4p6lf414i"]
+[gd_scene load_steps=8 format=3 uid="uid://cirw4p6lf414i"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_pmtct"]
+[ext_resource type="Texture2D" uid="uid://eqmomt6x5m6c" path="res://themes/windows_xp_bg.png" id="2_2q5j6"]
 [ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_wq7f5"]
 [ext_resource type="Theme" uid="uid://dhildev208m5x" path="res://themes/healthbar.tres" id="3_o8ks4"]
 [ext_resource type="Texture2D" uid="uid://bkdxgj5butkmn" path="res://themes/windows_bottom_bar.svg" id="3_ph27l"]
 [ext_resource type="Script" path="res://scripts/StorageBar.gd" id="4_y513t"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_cqjo5"]
+[ext_resource type="FontFile" uid="uid://dd0rk6arlj6e" path="res://fonts/font1.ttf" id="5_6jetf"]
 
 [node name="main" type="Node2D"]
 position = Vector2(346, 553)
@@ -24,8 +24,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_cqjo5")
-metadata/_edit_use_anchors_ = true
+scale = Vector2(0.997271, 0.998909)
+texture = ExtResource("2_2q5j6")
+expand_mode = 3
 
 [node name="Center" type="CenterContainer" parent="CanvasLayer/TextureRect"]
 layout_mode = 1
@@ -42,6 +43,18 @@ visible = false
 position = Vector2(572, 321)
 texture = ExtResource("2_wq7f5")
 
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.926
+anchor_right = 1.001
+anchor_bottom = 1.0
+offset_top = -0.048038
+offset_right = 542.848
+offset_bottom = 30.0
+scale = Vector2(0.680001, 0.6)
+texture = ExtResource("3_ph27l")
+expand_mode = 2
+
 [node name="Control2" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchor_left = -0.002
@@ -56,6 +69,7 @@ grow_vertical = 0
 size_flags_vertical = 8
 
 [node name="WindowsBottomBar" type="Sprite2D" parent="CanvasLayer/Control2"]
+visible = false
 position = Vector2(578, 43)
 scale = Vector2(0.219, 0.219)
 texture = ExtResource("3_ph27l")
@@ -72,6 +86,21 @@ offset_right = -135.672
 grow_horizontal = 2
 grow_vertical = 0
 
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.234
+anchor_top = -0.114
+anchor_right = 1.02
+anchor_bottom = 1.288
+offset_left = 12.91
+offset_top = 0.99
+offset_right = -583.3
+offset_bottom = -11.08
+theme_override_fonts/font = ExtResource("5_6jetf")
+theme_override_font_sizes/font_size = 36
+text = "STORAGE"
+
 [node name="StorageBar2" type="ProgressBar" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = -1
@@ -80,8 +109,9 @@ anchor_top = -0.114
 anchor_right = 1.161
 anchor_bottom = 1.0
 offset_left = 106.625
-offset_top = -0.00999974
+offset_top = -4.01
 offset_right = -97.015
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("3_o8ks4")

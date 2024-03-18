@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cirw4p6lf414i"]
+[gd_scene load_steps=7 format=3 uid="uid://cirw4p6lf414i"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_pmtct"]
 [ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_wq7f5"]
 [ext_resource type="Theme" uid="uid://dhildev208m5x" path="res://themes/healthbar.tres" id="3_o8ks4"]
+[ext_resource type="Texture2D" uid="uid://bkdxgj5butkmn" path="res://themes/windows_bottom_bar.svg" id="3_ph27l"]
 [ext_resource type="Script" path="res://scripts/StorageBar.gd" id="4_y513t"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_cqjo5"]
@@ -40,6 +41,24 @@ grow_vertical = 2
 visible = false
 position = Vector2(572, 321)
 texture = ExtResource("2_wq7f5")
+
+[node name="Control2" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = -0.002
+anchor_top = 0.913
+anchor_right = 1.001
+anchor_bottom = 1.0
+offset_left = 0.304
+offset_top = -8.62403
+offset_right = -0.152054
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
+[node name="WindowsBottomBar" type="Sprite2D" parent="CanvasLayer/Control2"]
+position = Vector2(578, 43)
+scale = Vector2(0.219, 0.219)
+texture = ExtResource("3_ph27l")
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3

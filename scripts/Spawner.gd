@@ -7,7 +7,7 @@ var popupCaptcha = preload("res://scenes/popupCaptcha.tscn")
 
 @export var handicap = GlobalVars.handicap
 
-var differenceInSpawn = 1.5
+var differenceInSpawn = 2
 var borderBuffer = 100
 var captchaLikelihood = 6 # lower means more likely
 
@@ -18,7 +18,7 @@ func _ready():
 	resetSpawn()
 
 func resetSpawn():
-	var spawnDif = randi() % differenceInSpawn
+	var spawnDif = randi() % differenceInSpawn + 0.5
 	timer.set_wait_time(handicap + spawnDif)
 	
 	

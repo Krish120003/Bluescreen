@@ -2,7 +2,7 @@ extends Node
 
 
 var storage = 0
-var handicap = 3
+var handicap = 2
 var maxStorage = 5
 
 # Called when the node enters the scene tree for the first time.
@@ -21,4 +21,5 @@ func storageIncrease():
 	
 func restartGame():
 	storage = 0
+	handicap = 2
 	

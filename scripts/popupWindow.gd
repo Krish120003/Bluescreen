@@ -10,9 +10,23 @@ var warningSpawnTime = 2
 func _ready():
 	# set custom size
 	#var xStretch = randi() % 9
-	#var yStretch = randi() % 5
-	#scale.x += xStretch / 3
-	#scale.y += yStretch / 3
+	#$"../RichTextLabel/Label".text = "hi"
+	#%RichTextLabel.text = "hello"
+	
+	var lab = $RichTextLabel/Label
+	
+	if (lab != null):
+		var txt = ""
+		
+		for n in range(3 + (randi() % 32)):
+			var i = randi() % 40;
+			if i > 32:
+				txt += "!!! h4cks !!!"
+			else:
+				var c = "abcdefghijklmnopqrstuvwyz1234567890"[i];
+				txt += c
+		
+		lab.text = txt
 	
 	timer.set_wait_time(originalSpawnTime)
 	timer.start()

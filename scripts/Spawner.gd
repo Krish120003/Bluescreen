@@ -5,9 +5,9 @@ var popupWide = preload("res://scenes/popupWide.tscn")
 var popupCaptcha = preload("res://scenes/popupCaptcha.tscn")
 @onready var timer = get_node("Timer")
 
-@export var handicap = 0
+@export var handicap = GlobalVars.handicap
 
-var differenceInSpawn = 3
+var differenceInSpawn = 1.5
 var borderBuffer = 100
 var captchaLikelihood = 6 # lower means more likely
 
@@ -33,7 +33,6 @@ func _on_timer_timeout():
 		popupSpawned = popupCaptcha.instantiate()
 	elif spawnType < captchaLikelihood/2:
 		popupSpawned = popupWide.instantiate()
-		print("THIC")
 		
 	else:
 		popupSpawned = popup.instantiate()

@@ -1,3 +1,31 @@
-[gd_scene format=3 uid="uid://0n0k54qs4fbh"]
+[gd_scene load_steps=3 format=3 uid="uid://0n0k54qs4fbh"]
+
+[ext_resource type="Script" path="res://scripts/popupWindow.gd" id="1_uysmy"]
+[ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_oo33u"]
 
 [node name="PopupWide" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_uysmy")
+
+[node name="BGSprite" type="Sprite2D" parent="Area2D"]
+scale = Vector2(2, 1)
+texture = ExtResource("2_oo33u")
+
+[node name="Button" type="Button" parent="Area2D"]
+offset_left = 92.0
+offset_top = -64.0
+offset_right = 128.0
+offset_bottom = -30.0
+metadata/_edit_use_anchors_ = true
+
+[node name="X" type="Sprite2D" parent="Area2D/Button"]
+position = Vector2(18, 17)
+scale = Vector2(0.261719, 0.242187)
+texture = ExtResource("2_oo33u")
+
+[node name="Timer" type="Timer" parent="Area2D"]
+wait_time = 6.0
+
+[connection signal="pressed" from="Area2D/Button" to="Area2D" method="_on_button_pressed"]
+[connection signal="timeout" from="Area2D/Timer" to="Area2D" method="_on_timer_timeout"]

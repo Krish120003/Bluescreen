@@ -2,6 +2,7 @@ extends Node
 
 
 var storage = 0
+var handicap = 3
 var maxStorage = 5
 
 # Called when the node enters the scene tree for the first time.

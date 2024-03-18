@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dulojiscntjlq"]
+[gd_scene load_steps=6 format=3 uid="uid://dulojiscntjlq"]
 
 [ext_resource type="Script" path="res://scripts/popupCaptcha.gd" id="1_0u5el"]
 [ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_atgl1"]
 [ext_resource type="FontFile" uid="uid://dd0rk6arlj6e" path="res://fonts/font1.ttf" id="3_vo1yg"]
 [ext_resource type="Texture2D" uid="uid://1gfk5v8v6xn1" path="res://themes/sketchedLines.png" id="4_d1s0l"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2qcij"]
+
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_0u5el")
 
 [node name="BGSprite" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_2qcij")
 texture = ExtResource("2_atgl1")
 
 [node name="Label" type="Label" parent="."]

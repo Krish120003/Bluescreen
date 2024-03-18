@@ -7,9 +7,9 @@ var popupCaptcha = preload("res://scenes/popupCaptcha.tscn")
 
 @export var handicap = GlobalVars.handicap
 
-var differenceInSpawn = 2
+var differenceInSpawn = 1
 var borderBuffer = 100
-var captchaLikelihood = 6 # lower means more likely
+var captchaLikelihood = 5 # lower means more likely
 
 
 # Called when the node enters the scene tree for the first time.

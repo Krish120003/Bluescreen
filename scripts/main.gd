@@ -14,7 +14,7 @@ func _ready():
 func _process(delta):
 	if GlobalVars.storage >= GlobalVars.maxStorage:
 		# end the game
-		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+		get_tree().change_scene_to_file("res://scenes/endscreen.tscn")
 		
 		
 

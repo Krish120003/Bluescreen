@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/popupCaptcha.gd" id="1_0u5el"]
 [ext_resource type="Texture2D" uid="uid://4mpsxmpqf12h" path="res://themes/window_popup.svg" id="2_70vd1"]
-[ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_atgl1"]
 [ext_resource type="FontFile" uid="uid://dd0rk6arlj6e" path="res://fonts/font1.ttf" id="3_vo1yg"]
+[ext_resource type="Texture2D" uid="uid://bde8xqb56s5j5" path="res://themes/X_button_new.svg" id="4_aoujf"]
 [ext_resource type="Texture2D" uid="uid://1gfk5v8v6xn1" path="res://themes/sketchedLines.png" id="4_d1s0l"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2qcij"]
@@ -41,11 +41,12 @@ offset_top = 21.0
 offset_right = 64.0
 offset_bottom = 55.0
 size_flags_horizontal = 8
+flat = true
 
 [node name="Enter" type="Sprite2D" parent="Button"]
 position = Vector2(18, 17)
-scale = Vector2(0.261719, 0.242187)
-texture = ExtResource("2_atgl1")
+scale = Vector2(0.207547, 0.194969)
+texture = ExtResource("4_aoujf")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 6.0

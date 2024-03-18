@@ -5,7 +5,7 @@ extends Area2D
 @onready var enter: Sprite2D = get_node("Button/Enter")
 var warning = false # if window has started flashing
 var originalSpawnTime = 3
-var warningSpawnTime = 1
+var warningSpawnTime = 2
 var captcha = "ra1"
 var font = preload("res://fonts/Basic96.tres")
 

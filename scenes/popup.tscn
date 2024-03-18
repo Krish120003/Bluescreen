@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://di285rgh4y1ij"]
+[gd_scene load_steps=5 format=3 uid="uid://di285rgh4y1ij"]
 
 [ext_resource type="Script" path="res://scripts/popupWindow.gd" id="1_4t1gk"]
 [ext_resource type="Texture2D" uid="uid://4mpsxmpqf12h" path="res://themes/window_popup.svg" id="2_n1elp"]
 [ext_resource type="Texture2D" uid="uid://bde8xqb56s5j5" path="res://themes/X_button_new.svg" id="3_e6g4u"]
+[ext_resource type="Texture2D" uid="uid://dqvc33eli8j26" path="res://themes/wompwomp.png" id="4_3ojg5"]
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_4t1gk")
@@ -27,6 +28,11 @@ texture = ExtResource("3_e6g4u")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 6.0
+
+[node name="Wompwomp" type="Sprite2D" parent="."]
+position = Vector2(0.937499, 13.1875)
+scale = Vector2(0.332704, 0.257308)
+texture = ExtResource("4_3ojg5")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

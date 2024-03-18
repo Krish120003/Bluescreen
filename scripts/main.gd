@@ -19,6 +19,6 @@ func _process(delta):
 		
 
 func _on_timer_timeout():
-	print("HARDER!!!")
+	#print("HARDER!!!")
 	if GlobalVars.handicap > 0:
-		GlobalVars.handicap -= 0.3
+		GlobalVars.handicap -= 0.4

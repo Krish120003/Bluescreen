@@ -9,7 +9,7 @@ var warningSpawnTime = 2
 var captcha = "ra1"
 var font = preload("res://fonts/Basic96.tres")
 
-var characters = 'abcdefghijklmnopqrstuvwxyz0123456789'
+var characters = 'abcdefhijklmnorstuvwxyz0123456789aaa'
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

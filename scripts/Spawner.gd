@@ -5,7 +5,6 @@ var popupCaptcha = preload("res://scenes/popupCaptcha.tscn")
 @onready var timer = get_node("Timer")
 
 @export var handicap = 0
-@export var storage = 0
 
 var differenceInSpawn = 5
 var borderBuffer = 100
@@ -40,13 +39,13 @@ func _on_timer_timeout():
 	if randi() % 2 == 0:
 		xDif = -xDif
 	if randi() % 2 == 0:
-		yDif = -yDif
+		yDif = -yDif + 100 # so as to not go over our windows bar
 	popupSpawned.position = Vector2(xDif,yDif)
 	add_child(popupSpawned)
 	resetSpawn()
 	
 func incrementStorage():
-	storage += 1
-	print("storage:", storage)
+	GlobalVars.storageIncrease()
+	print("storage:", GlobalVars.storage)
 	
 	

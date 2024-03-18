@@ -8,7 +8,7 @@ var originalSpawnTime = 3
 var warningSpawnTime = 1
 var captcha = "ra1"
 
-var captchas = [] #manually make and assign captchas
+var captchas = ["a4f", "34f", "aBc", "C03", "jan"] #manually make and assign captchas
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

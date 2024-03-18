@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cirw4p6lf414i"]
+[gd_scene load_steps=6 format=3 uid="uid://cirw4p6lf414i"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_pmtct"]
 [ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_wq7f5"]
+[ext_resource type="Theme" uid="uid://dhildev208m5x" path="res://themes/healthbar.tres" id="3_o8ks4"]
+[ext_resource type="Script" path="res://scripts/StorageBar.gd" id="4_y513t"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_cqjo5"]
 
 [node name="main" type="Node2D"]
-position = Vector2(-277, -194)
+position = Vector2(346, 553)
 script = ExtResource("1_pmtct")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -38,3 +40,18 @@ grow_vertical = 2
 visible = false
 position = Vector2(572, 321)
 texture = ExtResource("2_wq7f5")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 264.0
+offset_top = 563.0
+offset_right = 876.0
+offset_bottom = 645.0
+
+[node name="StorageBar2" type="ProgressBar" parent="CanvasLayer/Control"]
+offset_right = 582.0
+offset_bottom = 32.0
+theme = ExtResource("3_o8ks4")
+max_value = 20.0
+script = ExtResource("4_y513t")

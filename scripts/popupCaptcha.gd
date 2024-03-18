@@ -58,3 +58,7 @@ func _on_timer_timeout():
 		get_parent().incrementStorage()
 		queue_free()
 
+
+
+func _on_line_edit_text_submitted(new_text):
+	_on_button_pressed()

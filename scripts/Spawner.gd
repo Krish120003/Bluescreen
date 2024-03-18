@@ -1,14 +1,15 @@
 extends Marker2D
 
 var popup = preload("res://scenes/popup.tscn")
+var popupWide = preload("res://scenes/popupWide.tscn")
 var popupCaptcha = preload("res://scenes/popupCaptcha.tscn")
 @onready var timer = get_node("Timer")
 
 @export var handicap = 0
 
-var differenceInSpawn = 5
+var differenceInSpawn = 3
 var borderBuffer = 100
-var captchaLikelihood = 4 # lower means more likely
+var captchaLikelihood = 6 # lower means more likely
 
 
 # Called when the node enters the scene tree for the first time.
@@ -27,14 +28,21 @@ func resetSpawn():
 func _on_timer_timeout():
 	# chose which popup to generate
 	var popupSpawned
-	if randi() % captchaLikelihood == 0:
+	var spawnType = randi() % captchaLikelihood
+	if spawnType == 0:
 		popupSpawned = popupCaptcha.instantiate()
+	elif spawnType < captchaLikelihood/2:
+		popupSpawned = popupWide.instantiate()
+		print("THIC")
+		
 	else:
 		popupSpawned = popup.instantiate()
+		
 	# get_parent
 	var windowSize = get_parent().get_parent().get_size() 
-	var xDif = randi() % (int(windowSize[0]/2)) - (int(windowSize[0]/8)) # add buffer limit so not out of bounds
-	var yDif = randi() % (int(windowSize[1]/2)) - (int(windowSize[1]/6)) # add buffer limit so not out of bounds
+	# subtraction of spawn type ensures large windows stay in bounds
+	var xDif = randi() % (int(windowSize[0]/2)) - (int(windowSize[0]/(8 - int(spawnType == 1)))) # add buffer limit so not out of bounds
+	var yDif = randi() % (int(windowSize[1]/2)) - (int(windowSize[1]/(6 - int(spawnType == 1)))) # add buffer limit so not out of bounds
 	# add additional randomness for negative
 	if randi() % 2 == 0:
 		xDif = -xDif

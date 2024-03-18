@@ -2,7 +2,7 @@ extends Node
 
 
 var storage = 0
-var maxStorage = 2
+var maxStorage = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

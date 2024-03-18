@@ -7,8 +7,9 @@ var warning = false # if window has started flashing
 var originalSpawnTime = 3
 var warningSpawnTime = 1
 var captcha = "ra1"
+var font = preload("res://fonts/Basic96.tres")
 
-var captchas = ["a4f", "34f", "aBc", "C03", "jan"] #manually make and assign captchas
+var characters = 'abcdefghijklmnopqrstuvwxyz0123456789'
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,9 +18,15 @@ func _ready():
 	#var yStretch = randi() % 5
 	#scale.x += xStretch / 3
 	#scale.y += yStretch / 3
+	# chose a captcha
+	var captchaNum1= randi() % 36
+	var captchaNum2 = randi() % 36
+	var captchaNum3 = randi() % 36
+	captcha = characters[captchaNum1] + characters[captchaNum2] + characters[captchaNum3]
 	
 	timer.set_wait_time(originalSpawnTime)
 	timer.start()
+	get_node("Label").text = captcha
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

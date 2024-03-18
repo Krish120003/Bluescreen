@@ -3,7 +3,7 @@ extends Area2D
 @onready var timer = get_node("Timer")
 @onready var background: Sprite2D = get_node("BGSprite")
 var warning = false # if window has started flashing
-var originalSpawnTime = 1
+var originalSpawnTime = 2
 var warningSpawnTime = 2
 
 # Called when the node enters the scene tree for the first time.

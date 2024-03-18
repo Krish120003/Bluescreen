@@ -34,12 +34,12 @@ func _on_timer_timeout():
 	# get_parent
 	var windowSize = get_parent().get_parent().get_size() 
 	var xDif = randi() % (int(windowSize[0]/2)) - (int(windowSize[0]/8)) # add buffer limit so not out of bounds
-	var yDif = randi() % (int(windowSize[1]/2)) - (int(windowSize[1]/8)) # add buffer limit so not out of bounds
+	var yDif = randi() % (int(windowSize[1]/2)) - (int(windowSize[1]/6)) # add buffer limit so not out of bounds
 	# add additional randomness for negative
 	if randi() % 2 == 0:
 		xDif = -xDif
 	if randi() % 2 == 0:
-		yDif = -yDif + 100 # so as to not go over our windows bar
+		yDif = -yDif  
 	popupSpawned.position = Vector2(xDif,yDif)
 	add_child(popupSpawned)
 	resetSpawn()

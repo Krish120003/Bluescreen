@@ -2,8 +2,8 @@ extends Node
 
 
 var storage = 0
-var handicap = 2
-var maxStorage = 5
+var handicap = 1
+var maxStorage = 4
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://8p1uo3k55k8m"]
 
+[ext_resource type="Texture2D" uid="uid://bx61gpxt55pdj" path="res://Group 8.png" id="1_3wchh"]
 [ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_u2sjh"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_d43cv"]
 
 [node name="MainMenu" type="Node"]
 
@@ -12,7 +11,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_d43cv")
+texture = ExtResource("1_3wchh")
+expand_mode = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_u2sjh")
@@ -60,13 +60,13 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 20
-text = "play"
+text = "CLICK HERE TO DOWNLOAD MORE RAM!!!"
 
 [node name="ButtonQuit" type="Button" parent="CanvasLayer/Menu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 20
-text = "quit"
+text = "Cancel"
 
 [connection signal="pressed" from="CanvasLayer/Menu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonPlay" to="CanvasLayer" method="_on_button_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/Menu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonQuit" to="CanvasLayer" method="_on_button_quit_pressed"]

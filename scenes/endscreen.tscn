@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cprksue6loncn"]
+
+[ext_resource type="Texture2D" uid="uid://cweouh6x8kuw4" path="res://bluescreen_gameover.svg" id="1_pet7x"]
+[ext_resource type="Script" path="res://scripts/endscreen.gd" id="2_njs43"]
+
+[node name="endscreen" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pet7x")
+expand_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_njs43")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="reboot" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 2
+offset_left = 239.0
+offset_top = 502.0
+offset_right = 437.0
+offset_bottom = 560.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/Control/reboot" to="CanvasLayer" method="_on_reboot_pressed"]

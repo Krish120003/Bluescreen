@@ -55,7 +55,7 @@ func _on_timer_timeout():
 		warning = true
 	else:
 		# ADD TO TOTAL
-		get_parent().incrementStorage()
+		GlobalVars.storageIncrease()
 		queue_free()
 
 

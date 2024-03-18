@@ -58,21 +58,22 @@ size_flags_horizontal = 3
 texture = ExtResource("3_ph27l")
 expand_mode = 2
 
-[node name="Control2" type="Control" parent="CanvasLayer"]
+[node name="Control2" type="Control" parent="CanvasLayer/TextureRect2"]
 visible = false
-layout_mode = 3
+layout_mode = 1
 anchor_left = -0.002
 anchor_top = 0.913
 anchor_right = 1.001
 anchor_bottom = 1.0
-offset_left = 0.304
-offset_top = -8.62403
-offset_right = -0.152054
+offset_left = 0.450829
+offset_top = -99.5473
+offset_right = -0.00516129
+offset_bottom = -90.9233
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
 
-[node name="WindowsBottomBar" type="Sprite2D" parent="CanvasLayer/Control2"]
+[node name="WindowsBottomBar" type="Sprite2D" parent="CanvasLayer/TextureRect2/Control2"]
 visible = false
 position = Vector2(578, 43)
 scale = Vector2(0.219, 0.219)

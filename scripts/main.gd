@@ -5,6 +5,7 @@ var Spawner = preload("res://scenes/spawner.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$music.play()
 	GlobalVars.restartGame()
 	var spawner = Spawner.instantiate()
 	$CanvasLayer/TextureRect/Center.add_child(spawner)
@@ -15,7 +16,7 @@ func _process(delta):
 	if GlobalVars.storage >= GlobalVars.maxStorage:
 		# end the game
 		get_tree().change_scene_to_file("res://scenes/endscreen.tscn")
-		
+		#$gameover.play()
 		
 
 func _on_timer_timeout():

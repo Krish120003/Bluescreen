@@ -11,6 +11,10 @@ var differenceInSpawn = 1
 var borderBuffer = 100
 var captchaLikelihood = 6 # lower means more likely
 
+var pop: AudioStreamPlayer2D # Make sure to assign this in the editor
+var rng = RandomNumberGenerator.new()
+
+var soundeffectversion = rng.randf_range(1, 2)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,6 +24,8 @@ func _ready():
 func resetSpawn():
 	var spawnDif = randi() % differenceInSpawn + 0.1
 	timer.set_wait_time(handicap + spawnDif)
+
+
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,10 +51,16 @@ func _on_timer_timeout():
 	# add additional randomness for negative
 	if randi() % 2 == 0:
 		xDif = -xDif
+		$pop.play()
 	if randi() % 2 == 0:
 		yDif = -yDif  
+
 	popupSpawned.position = Vector2(xDif,yDif)
 	add_child(popupSpawned)
+	$pop2.play()
+
+	#$pop.play()
+	#$pop2.play()
 	resetSpawn()
 	
 func incrementStorage():

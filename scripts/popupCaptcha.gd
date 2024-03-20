@@ -8,6 +8,7 @@ var originalSpawnTime = 3
 var warningSpawnTime = 2
 var captcha = "ra1"
 var font = preload("res://fonts/Basic96.tres")
+# var correct = preload("res://audio/Pop sound effect.wav") # Adjust the path and file extension as per your sound effect
 
 var characters = 'abcdefhijklmnorstuvwxyz0123456789aaa'
 
@@ -36,6 +37,7 @@ func _process(delta):
 
 func _on_button_pressed():
 	var text = str($LineEdit.text)
+	
 	if text == captcha:
 		print("The captcha ", text, " was entered.")
 		queue_free()
@@ -43,8 +45,8 @@ func _on_button_pressed():
 		# show to user that its wrong?
 		# sound effect? 
 		enter.self_modulate = Color("Red", 0.5)
+		$correct.play()
 		pass
-		
 	
 
 func _on_timer_timeout():

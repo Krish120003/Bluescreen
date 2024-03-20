@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://drjlpxruccutg"
+path="res://.godot/imported/Blue Screen Of Death Sound.wav-90c3644cf837959ea77c27dc0ad8b614.sample"
+
+[deps]
+
+source_file="res://audio/Blue Screen Of Death Sound.wav"
+dest_files=["res://.godot/imported/Blue Screen Of Death Sound.wav-90c3644cf837959ea77c27dc0ad8b614.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

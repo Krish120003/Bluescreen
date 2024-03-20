@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cprksue6loncn"]
+[gd_scene load_steps=4 format=3 uid="uid://cprksue6loncn"]
 
 [ext_resource type="Texture2D" uid="uid://cweouh6x8kuw4" path="res://bluescreen_gameover.svg" id="1_pet7x"]
 [ext_resource type="Script" path="res://scripts/endscreen.gd" id="2_njs43"]
+[ext_resource type="AudioStream" uid="uid://drjlpxruccutg" path="res://audio/Blue Screen Of Death Sound.wav" id="3_p7rcy"]
 
 [node name="endscreen" type="Node"]
 
@@ -34,5 +35,8 @@ offset_bottom = 560.0
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 20
 flat = true
+
+[node name="gameover" type="AudioStreamPlayer2D" parent="CanvasLayer"]
+stream = ExtResource("3_p7rcy")
 
 [connection signal="pressed" from="CanvasLayer/Control/reboot" to="CanvasLayer" method="_on_reboot_pressed"]

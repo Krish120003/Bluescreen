@@ -1,10 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkbsnyxqmsqdf"]
+[gd_scene load_steps=4 format=3 uid="uid://bkbsnyxqmsqdf"]
 
 [ext_resource type="Script" path="res://scripts/Spawner.gd" id="1_lrmae"]
+[ext_resource type="AudioStream" uid="uid://deg40y2ccytgr" path="res://audio/Pop sound effect.wav" id="2_j25f4"]
+[ext_resource type="AudioStream" uid="uid://c0mfsobyiqlxy" path="res://audio/pop2.wav" id="3_v155c"]
 
 [node name="Spawner" type="Marker2D"]
 script = ExtResource("1_lrmae")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="pop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_j25f4")
+volume_db = -10.0
+
+[node name="pop2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_v155c")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

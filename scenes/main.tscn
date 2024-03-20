@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cirw4p6lf414i"]
+[gd_scene load_steps=9 format=3 uid="uid://cirw4p6lf414i"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_pmtct"]
-[ext_resource type="Texture2D" uid="uid://eqmomt6x5m6c" path="res://themes/windows_xp_bg.png" id="2_2q5j6"]
+[ext_resource type="Texture2D" uid="uid://edubt7xkmv8u" path="res://themes/windows_xp_bg.png" id="2_2q5j6"]
 [ext_resource type="Texture2D" uid="uid://ccrmjikqu4v6f" path="res://icon.svg" id="2_wq7f5"]
 [ext_resource type="Theme" uid="uid://dhildev208m5x" path="res://themes/healthbar.tres" id="3_o8ks4"]
 [ext_resource type="Texture2D" uid="uid://bkdxgj5butkmn" path="res://themes/windows_bottom_bar.svg" id="3_ph27l"]
 [ext_resource type="Script" path="res://scripts/StorageBar.gd" id="4_y513t"]
 [ext_resource type="FontFile" uid="uid://dd0rk6arlj6e" path="res://fonts/font1.ttf" id="5_6jetf"]
+[ext_resource type="AudioStream" uid="uid://cs7p4nqp72vj" path="res://audio/BluescreenBG.mp3" id="8_b4edn"]
 
 [node name="main" type="Node2D"]
 position = Vector2(346, 553)
@@ -126,5 +127,8 @@ script = ExtResource("4_y513t")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_b4edn")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
